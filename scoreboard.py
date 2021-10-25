@@ -1,9 +1,11 @@
 import pygame.font
 from pygame.sprite import Group
+
 from ship import Ship
 
+
 class Scoreboard:
-    """A class to report scoring information"""
+    """A class to report scoring information."""
 
     def __init__(self, ai_settings, screen, stats):
         """Initialize scorekeeping attributes."""
@@ -12,7 +14,7 @@ class Scoreboard:
         self.ai_settings = ai_settings
         self.stats = stats
 
-        # Font settigns for scoring information.
+        # Font settings for scoring information.
         self.text_color = (30, 30, 30)
         self.font = pygame.font.SysFont(None, 48)
 
@@ -73,7 +75,5 @@ class Scoreboard:
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)
         self.screen.blit(self.level_image, self.level_rect)
-        # Draw ships
+        # Draw ships.
         self.ships.draw(self.screen)
-
-
